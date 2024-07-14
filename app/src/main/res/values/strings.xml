@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MemoApp</string>
+    <string name="button_to_display_a_list_of_memos">Button to display a list of memos</string>
+    <string name="button_to_display_a_map">Button to display a map</string>
+    <string name="button_to_display_settings">Button to display settings</string>
+    <string name="toolbar_background">Toolbar Background</string>
+    <string name="navbar_background">Navbar Background</string>
+    <string name="togglebutton" />
+</resources>

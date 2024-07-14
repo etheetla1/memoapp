@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_dynamic_neutral90"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textMemo"
+        android:layout_width="103dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="116dp"
+        android:text="Memo Title:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editMemoTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editMemo"
+        app:layout_constraintStart_toEndOf="@+id/textMemo"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/editMemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:ems="14"
+        android:inputType="text"
+        android:text=""
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textMemo" />
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButtonList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/button_to_display_a_list_of_memos"
+            android:scaleType="centerInside"
+            android:src="@drawable/listicon"
+            tools:src="@drawable/listicon" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSettings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00000080"
+            android:contentDescription="@string/button_to_display_settings"
+            android:scaleType="centerInside"
+            android:src="@drawable/settingsicon"
+            tools:ignore="RedundantDescriptionCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ToggleButton
+            android:id="@+id/toggleButtonEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_weight="1"
+            android:text="@string/togglebutton" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:text="Save" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroupPriority"
+        android:layout_width="193dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editMemo">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="High" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medium" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Low" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="date"
+        android:hint="Date"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupPriority" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
